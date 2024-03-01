@@ -1,2 +1,25 @@
 server:
   port: 8090
+
+qianfan-api:
+  apiKey: #千帆大模型的key
+  secretKey: #千帆大模型的密钥
+
+
+# 分组任务配置
+chatbot-api:
+  launchList: group01,group02 # 启动几组，就配置几组
+  group01:
+    groupName: ChatGPT AI 问答助手
+    groupId: # 知识星球ID
+    cookie:  # 知识星球个人cookie信息
+    openAiKey: # openAI的key
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: false
+  group02:
+    groupName: ChatGPT AI 问答助手02
+    groupId: # 知识星球ID
+    cookie:  # 知识星球个人cookie信息
+    openAiKey:
+    cronExpression: 0/30 * * * * ? # 执行的频次配置，参考：cron.qqe2.com
+    silenced: true
